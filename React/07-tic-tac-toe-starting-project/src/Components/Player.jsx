@@ -10,6 +10,7 @@ export default function Player({ initialName, symbol, isActive, onChangeName }) 
             onChangeName(symbol, playerName);
         }
     }
+    
     function handleOnChange(event) {
         setPlayerName(event.target.value);
     }
