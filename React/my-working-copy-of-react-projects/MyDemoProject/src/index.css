@@ -1,0 +1,31 @@
+/* App.css */
+body {
+  background-color: #ffecb3; /* Mild orange background */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333; /* Dark text color for contrast */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+.app-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff; /* White background for the container */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 80%; /* Set a width */
+  max-width: 600px; /* Max width for responsiveness */
+}
+
+h1 {
+  color: #d35400; /* Dark orange color for headings */
+}
+
+p {
+  color: #555; /* A softer gray color for paragraphs */
+  font-size: 1.1rem;
+}
