@@ -1,10 +1,17 @@
+import ResponseStructure from "./ResponseStructure"
 
 function App() {
   
 
   return (
-    <h1>React Tic-Tac-Toe</h1>
+    <>
+    {/* <h1>Hello !!!!!!!!!!!!</h1> */}
+    <ResponseStructure></ResponseStructure>
+    </>
   )
+
+  
+ 
 }
 
 export default App
