@@ -8,9 +8,11 @@ export default function ResponseStructure() {
 
     function getResponse(buttonType) {
         if (buttonType == 'get') {
-            axios.get("http://localhost:8080/users")
+            // https://dummyjson.com/carts/1
+            axios.get("https://dummyjson.com/users")
                 .then((response) => {
-                    setResponseObj(response.data)
+                    console.log(response.data.users);
+                    setResponseObj(response.data.users)
                 })
                 .catch((err) => {
                     console.log("Error occured :", err);
@@ -26,13 +28,14 @@ export default function ResponseStructure() {
             <h1>welcome</h1>
             <button onClick={() => { getResponse("get") }}>Get User Details</button >
             <button onClick={() => { getResponse("clear") }}>Clear</button >
-            <ol>
+            {responseObj.length > 0 ?<ol>
                 <table id="result">
                     <thead>
                         <tr>
                             <th>Id</th>
                             <th>Name</th>
-                            <th>Date Of Birth</th>
+                            <th>Age</th>
+                            <th>Email</th>
                         </tr>
                     </thead>
 
@@ -41,14 +44,18 @@ export default function ResponseStructure() {
                         return (
                             <tr key={resObj.id}>
                                 <td>{resObj.id}</td>
-                                <td>{resObj.name}</td>
-                                <td>{resObj.birthDate}</td>
+                                <td>{resObj.firstName}</td>
+                                <td>{resObj.age}</td>
+                                <td>{resObj.email}</td>
+                               
                             </tr>
                         )
                     })
                     }
                 </table>
             </ol>
+            : ""
+}
         </>
 
     )
